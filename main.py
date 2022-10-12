@@ -3,6 +3,7 @@
 #btw replit has a chat feature use that instead of commenting whole paragraphs into the code.
 
 #SP stands for Stat Points.
+
 SP = 10
 
 Trust = 0
@@ -11,3 +12,7 @@ IQ = 0
 
 name = input("What is your name player?").lower()
 print("Ah yes", name, "what a wonderful name!")
+
+print("""Now time to choose your stats!
+You have 10 points to use on which ever status you like.
+But be warned what is done cannot be undone!""")
