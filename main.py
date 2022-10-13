@@ -30,3 +30,4 @@ time.sleep(2)
 #I googled how to set delays for text and you just do that.~mark
 
 print("Current Status")#stats gonna go here
+
