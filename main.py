@@ -1,33 +1,76 @@
-#These are the stats from prof tams template im gonna change some of them.
-#Its possible that we can do it like one of those games for example fallout where you get a certain amount of points you can use on personality. Like you get 10 points to use on the characteristics you want.
-#btw replit has a chat feature use that instead of commenting whole paragraphs into the code.
-
-#SP stands for Stat Points. ~mark
 import time
 SP = 10
 
 Trust = 0
 Charisma = 0
 IQ = 0
+attack = 20
+defense = 20
+fire = 0
+water = 0
+earth = 0
+wind = 0
+def intro():
+  global Trust
+  global Charisma
+  global IQ 
+  global attack 
+  global defense 
+  global fire
+  global water
+  global earth
+  global wind 
 
-name = input("""What is your name player?
-""").lower()
+  name = input("What is your name player?")
+  time.sleep(1)
+  print("Ah yes " + name + ". what a wonderful name!")
+  time.sleep(1.5)
 
+  print("Now it's time to choose your ability.") 
+  time.sleep(1.5)
 
-#I thought having it too instant was kinda weird looking so i added some delays
-print("Ah yes", name, "what a wonderful name!")
-time.sleep(1.5)
-print("Now time to choose your stats!")
-time.sleep(1.5)
-print("You have 10 points to use on which ever status you like.")
-time.sleep(1.5)
-print("But be warned what is done cannot be undone!")
-time.sleep(2)
-#import time
-#time.sleep(5)
-#print("test")
-#^^^^^^^^^^^^^
-#I googled how to set delays for text and you just do that.~mark
+  print("But be warned what is done cannot be undone!")
+  time.sleep(1.5)
 
-print("Current Status")#stats gonna go here
+  mainAbility = input("You can choose fire, water, earth, or wind?")
 
+  while True:
+    if mainAbility == "fire":
+      fire += 10
+      break
+    elif mainAbility == "water":
+      water += 10
+      break
+    elif mainAbility == "earth":
+      earth += 10
+      break
+    elif mainAbility == "wind":
+      wind += 10
+      break
+    else:
+      mainAbility = input("Invalid Response. Please choose fire, water, earth or wind.")
+  time.sleep(1.5)
+
+  print("Great chioce! Now it is time to start the adventure!")
+  time.sleep(1.5)
+  
+def story1():
+  global Trust
+  global Charisma
+  global IQ 
+  global attack 
+  global defense 
+  global fire
+  global water
+  global earth
+  global wind
+  print("You have now been spawned into a kingdom of free for all.")
+  time.sleep(1.5)
+  print("The main objective is to aquire the stone of power before anyone else.")
+  time.sleep(1.5)
+  print("However, you might go through some obsticles on your way to getting the stone.")
+  time.sleep(1.5)
+  print("syed its been like 2 hours im done ima go to bed gn")
+
+intro()
+story1()
