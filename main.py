@@ -107,7 +107,12 @@ def story2():
   else:
     print("""\nEveryone looked at each other and they all declined. They were all afraid and didn't believe that you can kill the king one day. I guess it is the consequese of reading all day and not making friends. None the less you go off on your quest alone to your first city called Fargu.""")
     time.sleep(5)
-  print("During your journy, you encounter conartists")
+  print("During your journy, you encounter a man, he offers a spell book. Do you accept?")
+  while
+    if IQ == 80:
+      choice2 = input("""You are able to tell this is CLEARLY a scam. Decline his offer? Or threaten his life?""")
+    elif  
+    
 intro()
 story1()
 story2()
