@@ -30,7 +30,7 @@ def intro():
   print("But be warned what is done cannot be undone!")
   time.sleep(1.5)
 
-  mainAbility = input("You can choose fire, water, earth, or wind?").lower()
+  mainAbility = input("""You can choose fire, water, earth, or wind?""").lower()
 
   while True:
     if mainAbility == "fire":
@@ -57,7 +57,7 @@ def intro():
   time.sleep(1.5)
   
 def story1():
-  print("""\nYour journey begins in a country called Vextop ruled by an evil tyrant named King Leonardo.""")
+  print("""\nYour journey begins in a country called Vextop ruled by an evil tyrant named King Waes.""")
   time.sleep(4)
   
   print("""\nThe king heavily exploits the commoners for cheap labor. They make up 60% of the population and have low magical abilities. The nobles are people with great magical power. They use their power to take advantage of the commoners and makeup 10% of the population. The rest of the population is the middle class who live a somewhat peaceful life.""")
@@ -87,7 +87,7 @@ def story2():
       mainScore += 30
       defense += 10
       time.sleep(1)
-      print("""\nYou trained long and hard everyday with your friends. You kept training for 3 years when ever you found time. You got a few bruises and scars but it helpped define your mucules and made you stronger.""")
+      print("""\nYou trained long and hard everyday with your friends. You kept training for 3 years when ever you found time. You got a few bruises and scars but it helpped define your muscules and made you stronger.""")
       break
     elif choice1 == "b":
       IQ += 30
@@ -102,12 +102,12 @@ def story2():
   print("""\nYou decide that it is about time leave the orphanage and start to travel through the country to gains new skills and alies. Before leave you ask everyone to if they would join you on your quest.""")
   time.sleep(8)
   if choice1 == "a":
-    print("""\nEveryone looked at each other unsure wheather to join you. But one person name Michael agreed to join you. He was your best friend and you two train a lot with each other. You were happy to have a companion and set off to a city called Fargu.""")
+    print("""\nEveryone looked at each other unsure wheather to join you. But one person name Hingy agreed to join you. He was your best friend and you two train a lot with each other. You were happy to have a companion and set off to a city called Fargu.""")
     time.sleep(5)
   else:
     print("""\nEveryone looked at each other and they all declined. They were all afraid and didn't believe that you can kill the king one day. I guess it is the consequese of reading all day and not making friends. None the less you go off on your quest alone to your first city called Fargu.""")
     time.sleep(5)
-
+  print("During your journy, you encounter conartists")
 intro()
 story1()
 story2()
