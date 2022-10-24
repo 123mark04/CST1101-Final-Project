@@ -19,6 +19,7 @@ def intro():
   global wind 
   global mainAbility
   global mainScore
+  global money
   name = input("What is your name player?")
   time.sleep(1)
   print("Ah yes " + name + ". what a wonderful name!")
@@ -103,16 +104,30 @@ def story2():
   time.sleep(8)
   if choice1 == "a":
     print("""\nEveryone looked at each other unsure wheather to join you. But one person name Hingy agreed to join you. He was your best friend and you two train a lot with each other. You were happy to have a companion and set off to a city called Fargu.""")
-    time.sleep(5)
+  time.sleep(5)
   else:
     print("""\nEveryone looked at each other and they all declined. They were all afraid and didn't believe that you can kill the king one day. I guess it is the consequese of reading all day and not making friends. None the less you go off on your quest alone to your first city called Fargu.""")
     time.sleep(5)
-  print("During your journy, you encounter a man, he offers a spell book. Do you accept?")
-  while
-    if IQ == 80:
-      choice2 = input("""You are able to tell this is CLEARLY a scam. Decline his offer? Or threaten his life?""")
-    elif  
+  
+  print("""You walk for 2 hours, you encounter a man by the side of the trail, he offers you a cool spell book. Would you like to purchace it?""")
+  while True:
+  if IQ == 80:
+      choice2 = input("""A. This seems like a scam. Decline his offer.")
+      B. Take your chances and take the book.""").lower()
+    elif chioce2 = a:
+      print("""You decline his offer. He seems angry """)
+  
+    elif chioce2 = b:
+      print("""Take your chances and take the book. """)
+    else:
+      print("Invaild response. Please choose opsion A or B.")
+
+print("Now you have a varity of spells that you can use to for any obsticales during your journey.")
+
+print(""
+  
+
+
     
 intro()
 story1()
-story2()
