@@ -174,29 +174,29 @@ def story3():
   global mainScore
   global money
   global name
-  print("You finally arrive to Fargu and final goal is to kill the King Waes. But you can't do it alone, you want to find other people to team up with to defeat the King.")
+  print("\nYou finally arrive to Fargu and final goal is to kill the King Waes. But you can't do it alone, you want to find other people to team up with to defeat the King.")
   time.sleep(5)
-  print("You see a warrior in the distance and you're thinking of going up to him.")
+  print("\nYou see a warrior in the distance and you're thinking of going up to him.")
   time.sleep(2)
-  print("Me:Hey who are you?!")
+  print("\nMe:Hey who are you?!")
   time.sleep(1)
-  print("""Warrior: "I'm Bani, what do you want?" *Casually floating water in his right hand*""")
+  print("""\nWarrior: "I'm Bani, what do you want?" *Casually floating water in his right hand*""")
   time.sleep(2)
-  print("Hey I'm "+ str(name) + ", and I need your help. Can you team up with me? We need to kill the King before he has full control of our nation.")
+  print("\nHey I'm "+ str(name) + ", and I need your help. Can you team up with me? We need to kill the King before he has full control of our nation.")
   time.sleep(2)
-  print("""Bani: Kill the king you say? Why do you need my help?""")
+  print("""\nBani: Kill the king you say? Why do you need my help?""")
   time.sleep(1)
-  print("""You: Because you're one of a few people I'm going to find here and I see you have water powers so we can combine our powers to fight through this""")
+  print("""\nYou: Because you're one of a few people I'm going to find here and I see you have water powers so we can combine our powers to fight through this""")
   time.sleep(2)
-  print("""Bani: The king is someone to not be underestimated. He has a whole army by his side.""")
+  print("""\nBani: The king is someone to not be underestimated. He has a whole army by his side.""")
   time.sleep(2)
-  print("""My brother is part of his army. The king has his daughter captive in the next country 3 weeks away.I want you help me save her after we kill the king?""") 
+  print("""\nMy brother is part of his army. The king has his daughter captive in the next country 3 weeks away.I want you help me save her after we kill the king?""") 
   time.sleep(2)
-  print("""I will save your niece after killing the king""")
+  print("""\nI will save your niece after killing the king""")
   time.sleep(3)
-  print("""Now I must ask you a few questions to test your knowledge. If you are able to answer them correctly I will join you.""")
+  print("""\nNow I must ask you a few questions to test your knowledge. If you are able to answer them correctly I will join you.""")
   time.sleep(5)
-  print("""OK. What are your questions.""")
+  print("""\nOK. What are your questions.""")
   time.sleep(2)
   choice3 = input("""What is the fith plant in our solar system?
     A. Jupiter
@@ -206,7 +206,7 @@ def story3():
 
   while True:
     if choice3 == "a":
-      print("Correct, next.")
+      print("Correct, next one.")
       choice3 = "correct"
       break
     elif choice3 == "b" or choice3 == "c" or choice3 == "d":
@@ -226,23 +226,36 @@ def story3():
   while True:
     if choice4 == "a":
       print("correct")
+      choice4 = "correct"
       break
     elif choice4 == "b" or choice4 == "c" or choice4 == "d":
-      print("inccorect")
+      print("Wrong.")
+      choice4 = "incorrect"
       break
     else:
-      choice4 = input("invaid response. Choose A, B, c, or D")
+      choice4 = input("Wrong, pick something else.").lower()
   time.sleep(3)
   
   while choice3 == "correct" or choice4 == "correct":
-    choice5 = input("""When did the United States first gain its independence?"
+    choice5 = input("""When did the United States first gain its independence?
+    
     A. 1738
     B. 1492
     C. 1776
-     D. 1888""").lower()
-    
-
-  while choice3 == "incorrect" and choice4 == "incoorect":
+    D. 1888""").lower()
+    break
+  time.sleep(3)
+  while choice3 == "correct" or choice4 == "correct":
+    if choice5 == "a" or choice5 == "b" or choice5 == "d":
+      print("incorrect")
+      break
+    elif choice5 == "c":
+      print("correct")  
+      break
+    else:
+      choice5 = input("Wrong, pick something else.").lower()
+      
+  while choice3 == "incorrect" and choice4 == "incorrect":
     print("You are very dumb. I am not going to join you in your quest.")
     break
 
