@@ -43,7 +43,7 @@ def intro():
   print("But be warned what is done cannot be undone!")
   time.sleep(1.5)
 
-  mainAbility = input("""You can choose fire, water, earth, or wind?""").lower()
+  mainAbility = input("""You can choose fire, water, earth, or wind?\n""").lower()
 
   while True:
     if mainAbility == "fire":
@@ -131,9 +131,9 @@ def story2():
   
   #High IQ options
   while IQ ==80:
-    choice2 = input("""\n  A. This seems like a scam. Decline his offer.
+    choice2 = input("""\n    A. This seems like a scam. Decline his offer.
       
-  B. Take your chances. This book may give you new magical ability.""").lower()
+    B. Take your chances. This book may give you new magical ability.""").lower()
     break
   while IQ == 80:
     if choice2 == "a":
@@ -147,20 +147,33 @@ def story2():
 
 #Low IQ options
   while IQ < 80:
-    choice2 = input("""\n  A. Decline his offer?
+    choice2 = input("""\n    A. Decline his offer?
       
     B. Take the book this book may give you new magical ability.""").lower()
     break
   while IQ < 80:
     if choice2 == "a":
       print("You decline his offer. You missed out on a good deal")
+      break
     elif choice2 == "b":
       print("""\nTake your chances and take the book. But unfortunately it was a scam and you lost all of your money. You try to confront him but he was already gone.""")
       Money = 0
+      break
   else:
       choice2= input("Invaild response. Please choose option A or B.").lower()
 
 def story3(): 
+  global Charisma
+  global IQ 
+  global defense 
+  global fire
+  global water
+  global earth
+  global wind
+  global mainAbility
+  global mainScore
+  global money
+  global name
   print("You finally arrive to Fargu and final goal is to kill the King Waes. But you can't do it alone, you want to find other people to team up with to defeat the King.")
   time.sleep(5)
   print("You see a warrior in the distance and you're thinking of going up to him.")
@@ -186,53 +199,52 @@ def story3():
   print("""OK. What are your questions.""")
   time.sleep(2)
   choice3 = input("""What is the fith plant in our solar system?
-A. Jupiter
-B. Mars
-C. Saturn 
-D. Uranus""").lower()
+    A. Jupiter
+    B. Mars
+    C. Saturn 
+    D. Uranus""").lower()
 
   while True:
     if choice3 == "a":
       print("Correct, next.")
-      choice3 = "Correct"
+      choice3 = "correct"
       break
     elif choice3 == "b" or choice3 == "c" or choice3 == "d":
       print("Wrong, I'll give you 1 more chance.")
-      choice3 = "Incorrect"
+      choice3 = "incorrect"
       break
     else:
       choice3 = input("Wrong, pick something else.").lower()
   time.sleep(3)
   
   choice4 = input("""Next, what is the pythagorean theorom?
-  A.a^2+b^2=c^2
-  B.a^2 + b^2 = (a+b)(a-b)
-  C.y=mx+b
-  D.V=s^3""").lower()
+    A.a^2+b^2=c^2
+    B.a^2 + b^2 = (a+b)(a-b)
+    C.y=mx+b
+    D.V=s^3""").lower()
   time.sleep(3)  
   while True:
     if choice4 == "a":
-      print("Correct")
+      print("correct")
       break
     elif choice4 == "b" or choice4 == "c" or choice4 == "d":
-      print("Inccorect")
+      print("inccorect")
       break
     else:
       choice4 = input("invaid response. Choose A, B, c, or D")
   time.sleep(3)
   
-  while choice3 == "Correct" or choice4 == "Correct":
+  while choice3 == "correct" or choice4 == "correct":
     choice5 = input("""When did the United States first gain its independence?"
-  A. 1738
-  B. 1492
-  C. 1776
-  D. 1888""").lower()
+    A. 1738
+    B. 1492
+    C. 1776
+     D. 1888""").lower()
     
 
-  while choice3 == "Incorrect" and choice4 == "incoorect":
+  while choice3 == "incorrect" and choice4 == "incoorect":
     print("You are very dumb. I am not going to join you in your quest.")
     break
-
 
 intro()
 stats()
