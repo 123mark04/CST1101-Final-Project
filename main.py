@@ -1,36 +1,24 @@
 import time
-Charisma = 0
+charisma = 0
 IQ = 50
 attack = 20
 defense = 20
-fire = 0
-water = 0
-earth = 0
-wind = 0
+mainScore = 10
 money = 0
 def stats():
-  print("\nYour current stats are:")
-  print("Charisma = "+str(Charisma))
-  print("IQ = " +str(IQ))
+  print("\nIQ = " +str(IQ))
   print("Attack = " +str(attack))
   print("Defence = " +str(defense))
-  print ("Fire = " +str(fire))
-  print("Water = " +str(water))
-  print("Earth = " +str(earth)) 
-  print("Wind = "+str(wind))
+  print (mainAbility+" = " +str(mainScore))
   print("Money = " +str(money)) 
   time.sleep(4)
 def intro():
-  global Charisma
+  global charisma
   global IQ  
   global defense 
-  global fire
-  global water
-  global earth
-  global wind 
   global mainAbility
   global mainScore
-  global Money
+  global money
   global name
   name = input("What is your name player?")
   time.sleep(1)
@@ -46,21 +34,8 @@ def intro():
   mainAbility = input("""You can choose fire, water, earth, or wind?\n""").lower()
 
   while True:
-    if mainAbility == "fire":
-      fire += 10
-      mainScore = fire
-      break
-    elif mainAbility == "water":
-      water += 10
-      mainScore = water
-      break
-    elif mainAbility == "earth":
-      earth += 10
-      mainScore = earth
-      break
-    elif mainAbility == "wind":
-      wind += 10
-      mainScore = wind
+    if mainAbility == "fire" or mainAbility == "water" or mainAbility == "earth" or mainAbility == "wind":
+      mainScore += 10
       break
     else:
       mainAbility = input("""I didn't quite get that. You can only pick fire, water, earth or wind so choose wisely.""").lower()
@@ -80,13 +55,9 @@ def story1():
   time.sleep(6)
 
 def story2():
-  global Charisma
+  global charisma
   global IQ 
   global defense 
-  global fire
-  global water
-  global earth
-  global wind
   global mainAbility
   global mainScore
   global money
@@ -95,13 +66,15 @@ def story2():
   
   A. Train with your friends to increase your """ +str(mainAbility)+""" mastery.
   
-  B. Learn how to read difficult books to increase your knowledge.""").lower()
-  
+  B. Learn how to read difficult books to increase your knowledge.
+
+Your Choice: """).lower()
+  time.sleep(1)
   while True:
     if choice1 == "a":
       mainScore += 30
       defense += 10
-      Charisma += 20
+      charisma += 20
       time.sleep(1)
       print("""\nYou trained long and hard everyday with your friends. You kept training for 3 years when ever you found time. You got a few bruises and scars but it helped define your muscules and made you stronger.""")
       break
@@ -118,14 +91,14 @@ def story2():
   print("""\nYou decide that it is about time leave the orphanage and start to travel through the country to gain new skills and alies. Before leave you ask everyone to if they would join you on your quest.""")
   time.sleep(8)
   if choice1 == "a":
-    print("""\nEveryone looked at each other unsure wheather to join you. But one person name Hingy agreed to join you. He was your best friend and you two train a lot with each other. You were happy to have a companion and set off to a city called Fargu.""")
-    money += 100
+    print("""\nEveryone looked at each other unsure wheather to join you. But one person name Hingy agreed to join you. He was your best friend and you two train a lot with each other. You both have a total of 200 gold that you have earned through the years. You were happy to have a companion and set off to a city called Fargu.""")
+    money += 200
     time.sleep(5)
   else:
-    print("""\nEveryone looked at each other and they all declined. They were all afraid and didn't believe that you can kill the king one day. I guess it is the consequese of reading all day and not making friends. None the less you go off on your quest alone to your first city called Fargu.""")
+    print("""\nEveryone looked at each other and they all declined. They were all afraid and didn't believe that you can kill the king one day. I guess it is the consequese of reading all day and not making friends. You only have 100 gold to your name. None the less you go off on your quest alone to your first city called Fargu.""")
     money += 100
     time.sleep(5)
-  
+
   print("""\nYou walk for 2 hours, you encounter a man by the side of the trail, he offers you a cool spell book. Would you like to purchace it?""")
   time.sleep(2)
   
@@ -133,43 +106,46 @@ def story2():
   while IQ ==80:
     choice2 = input("""\n    A. This seems like a scam. Decline his offer.
       
-    B. Take your chances. This book may give you new magical ability.""").lower()
+    B. Take your chances. This book may give you new magical ability.
+    
+You Choice: """).lower()
     break
   while IQ == 80:
     if choice2 == "a":
       print("""\nYou decline his offer. He seems angry but you made the right call. It's to early to take such a risk.""")
+      IQ += 10
       break
     elif choice2 == "b":
       print("""\nTake your chances and take the book. But unfortunately it was a scam and you lost all of your money. You try to confront him but he was already gone.""")
+      IQ -= 10
       break
     else:
       choice2= input("Invaild response. Please choose option A or B.").lower()
-
 #Low IQ options
   while IQ < 80:
     choice2 = input("""\n    A. Decline his offer?
       
-    B. Take the book this book may give you new magical ability.""").lower()
+    B. Take the book this book may give you new magical ability.
+
+Your Choice: """).lower()
     break
   while IQ < 80:
     if choice2 == "a":
-      print("You decline his offer. You missed out on a good deal")
+      print("\nYou decline his offer. You might have missed out on a good deal. But it's too early to make any rash decisions.")
+      IQ += 10
       break
     elif choice2 == "b":
       print("""\nTake your chances and take the book. But unfortunately it was a scam and you lost all of your money. You try to confront him but he was already gone.""")
-      Money = 0
+      IQ -= 10
+      money = 0
       break
-  else:
+    else:
       choice2= input("Invaild response. Please choose option A or B.").lower()
-
+  time.sleep(4)
 def story3(): 
-  global Charisma
+  global charisma
   global IQ 
   global defense 
-  global fire
-  global water
-  global earth
-  global wind
   global mainAbility
   global mainScore
   global money
@@ -178,90 +154,169 @@ def story3():
   time.sleep(5)
   print("\nYou see a warrior in the distance and you're thinking of going up to him.")
   time.sleep(2)
-  print("\nMe:Hey who are you?!")
+  print("\n"+name+": Hey who are you?!")
   time.sleep(1)
   print("""\nWarrior: "I'm Bani, what do you want?" *Casually floating water in his right hand*""")
   time.sleep(2)
-  print("\nHey I'm "+ str(name) + ", and I need your help. Can you team up with me? We need to kill the King before he has full control of our nation.")
+  print("\n" +name+": Hey I'm "+ str(name) + """, and I need your help. Can you team up with me? We need to kill the King before he has full control of our nation.""")
   time.sleep(2)
   print("""\nBani: Kill the king you say? Why do you need my help?""")
   time.sleep(1)
-  print("""\nYou: Because you're one of a few people I'm going to find here and I see you have water powers so we can combine our powers to fight through this""")
+  print("\n"+name+ """: Because you're one of a few people I'm going to find here and I see you have water powers so we can combine our powers to fight through this""")
   time.sleep(2)
   print("""\nBani: The king is someone to not be underestimated. He has a whole army by his side.""")
   time.sleep(2)
   print("""\nMy brother is part of his army. The king has his daughter captive in the next country 3 weeks away.I want you help me save her after we kill the king?""") 
   time.sleep(2)
-  print("""\nI will save your niece after killing the king""")
+  print("\n"+name+""": I will save your niece after killing the king""")
   time.sleep(3)
-  print("""\nNow I must ask you a few questions to test your knowledge. If you are able to answer them correctly I will join you.""")
+  print("""\nBani: Now I must ask you a few questions to test your knowledge. If you are able to answer them correctly I will join you.""")
   time.sleep(5)
-  print("""\nOK. What are your questions.""")
+  print("\n"+name+""": OK. What are your questions.""")
   time.sleep(2)
-  choice3 = input("""What is the fith plant in our solar system?
+  questions = []
+  choice3 = input("""\nWhat is the fith plant in our solar system?
     A. Jupiter
     B. Mars
     C. Saturn 
-    D. Uranus""").lower()
+    D. Uranus
 
+Your Choice: """).lower()
+  time.sleep(1)
   while True:
     if choice3 == "a":
       print("Correct, next one.")
       choice3 = "correct"
+      IQ += 10
       break
     elif choice3 == "b" or choice3 == "c" or choice3 == "d":
       print("Wrong, I'll give you 1 more chance.")
       choice3 = "incorrect"
+      IQ -= 10
       break
     else:
       choice3 = input("Wrong, pick something else.").lower()
+  questions.append(choice3)
   time.sleep(3)
   
-  choice4 = input("""Next, what is the pythagorean theorom?
+  choice4 = input("""\nNext, what is the pythagorean theorom?
     A.a^2+b^2=c^2
     B.a^2 + b^2 = (a+b)(a-b)
     C.y=mx+b
-    D.V=s^3""").lower()
-  time.sleep(3)  
+    D.V=s^3
+
+Your Choice: """).lower()
+  time.sleep(1)  
   while True:
     if choice4 == "a":
-      print("correct")
+      print("Correct")
       choice4 = "correct"
+      IQ += 10
       break
     elif choice4 == "b" or choice4 == "c" or choice4 == "d":
       print("Wrong.")
       choice4 = "incorrect"
+      IQ -= 10
       break
     else:
       choice4 = input("Wrong, pick something else.").lower()
+  questions.append(choice4)
   time.sleep(3)
   
   while choice3 == "correct" or choice4 == "correct":
-    choice5 = input("""When did the United States first gain its independence?
+    choice5 = input("""\nWhen did the United States first gain its independence?
     
     A. 1738
     B. 1492
     C. 1776
-    D. 1888""").lower()
+    D. 1888
+
+Your Choice: """).lower()
     break
-  time.sleep(3)
+  time.sleep(1)
   while choice3 == "correct" or choice4 == "correct":
     if choice5 == "a" or choice5 == "b" or choice5 == "d":
-      print("incorrect")
+      print("Incorrect")
+      choice5 = "incorrect"
+      IQ -= 10
+      questions.append(choice5)
       break
     elif choice5 == "c":
-      print("correct")  
+      print("Correct")
+      choice5 = "correct"
+      IQ += 10
+      questions.append(choice5)
       break
     else:
       choice5 = input("Wrong, pick something else.").lower()
-      
-  while choice3 == "incorrect" and choice4 == "incorrect":
-    print("You are very dumb. I am not going to join you in your quest.")
+  time.sleep(2)
+  correct = questions.count("correct")
+  while correct > 1:
+    print("""Wow, Your pretty smart. Seems like I'll trust your judgement and fight along side you.""")
+    charisma += 20
     break
+  while correct < 2: 
+    print("\nBani: You are very dumb. If you can not answer such basic questions, how do you ever expect to defeat the king. I am not going to join you in your quest.")
+    break 
+  time.sleep(4)
+def story4():
+  global charisma
+  global IQ 
+  global defense 
+  global mainAbility
+  global mainScore
+  global money
+  global name
+  print("After ecountering with Bani, your quest continues.")
+  time.sleep(2.5)
+  while True:
+    choice6 = ("""/nWe have a month of time to kill, what do you want to do to pass the time? Somthing productive."
 
+  A. Go to library
+  B. Go to bed
+  C. Train in courtyard
+  D. Go to party
+
+  Your Choice: """).lower()
+    break
+  while True:
+    if choice6 == "a":
+      print("Good, you can study about ancient aspects.")
+      IQ += 15
+    elif choice6 == "b":
+      print("Nice, you wasted your time sleeping.")
+    elif choice6 == "c":
+      print("Cool, you trained for a whole month here and you also made a friend.")
+      mainAbility += 30
+      defense += 20
+    elif choice6 == "d":
+      print("You went to a party and you became more socially active.")
+      charisma += 10
+      
+def story5():
+  print("\nYou feel hungry so you decide to head to a nearby diner.")
+  time.sleep(2.5)
+  print("""\n*CRASH!!!!!* You see a man fly out of the window of the diner. "AND STAY OUT YOU FREELOADER!!" says a man.""")
+  time.sleep(2.5)
+  print("""\nYou approach the man who flew out the window he seems drunk""")
+  time.sleep(2.5)
+  print("""\nHes carrying 4 swords on his side and has a bottle of beer in one hand""")
+  time.sleep(2.5)
+  print("""\nDrunkman: HEY U!!! I rann outa munny canb u spar mi sum chang.""")
+  time.sleep(2.5)
+  print("""\nYou look toward the diner theres a wanted poster on the wall, its the drunk man.""")
+  time.sleep(2.5)
+  print("""\nYou read under the poster "WANTED DEAD OR ALIVE! Yasen wanted for treason against the king, he has killed over 100 of the kings soldiers BEWARE!""")
+  time.sleep(2.5)
+  print("""\nThis guy seems like a good person to help me defeat the king. I need to get him to join my team.""")
+  time.sleep(2.5)
+  print("""\nHey you join my team!. 
+  Yasen: hrmmmm. If u defeet meee! I wil join u!
+  You: This will be a piece of cake. Hes so drunk I would never lose.""")
 intro()
 stats()
 story1()
 story2()
 stats()
 story3()
+stats()
