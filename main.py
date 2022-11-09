@@ -15,6 +15,7 @@ def stats():
 def intro():
   global charisma
   global IQ  
+  global attack
   global defense 
   global mainAbility
   global mainScore
@@ -57,6 +58,7 @@ def story1():
 def story2():
   global charisma
   global IQ 
+  global attack
   global defense 
   global mainAbility
   global mainScore
@@ -73,6 +75,7 @@ Your Choice: """).lower()
   while True:
     if choice1 == "a":
       mainScore += 30
+      attack += 10
       defense += 10
       charisma += 20
       time.sleep(1)
@@ -80,6 +83,7 @@ Your Choice: """).lower()
       break
     elif choice1 == "b":
       IQ += 30
+      attack += 10
       defense += 10
       time.sleep(1)
       print("""\nWith great knowledge comes great responsibility. You are now able to read a variety amount of books and know how to speak formaly. You spend 3 years studing you learned the ability the read people and effective battle stategies during conflict.""")
@@ -145,6 +149,7 @@ Your Choice: """).lower()
 def story3(): 
   global charisma
   global IQ 
+  global attack
   global defense 
   global mainAbility
   global mainScore
@@ -262,6 +267,7 @@ Your Choice: """).lower()
 def story4():
   global charisma
   global IQ 
+  global attack
   global defense 
   global mainAbility
   global mainScore
@@ -269,8 +275,7 @@ def story4():
   global name
   print("After ecountering with Bani, your quest continues.")
   time.sleep(2.5)
-  while True:
-    choice6 = ("""/nWe have a month of time to kill, what do you want to do to pass the time? Somthing productive."
+  choice6 = ("""/nWe have a month of time to kill, what do you want to do to pass the time? Somthing productive."
 
   A. Go to library
   B. Go to bed
@@ -278,22 +283,36 @@ def story4():
   D. Go to party
 
   Your Choice: """).lower()
-    break
   while True:
     if choice6 == "a":
       print("Good, you can study about ancient aspects.")
+      mainScore += 10
       IQ += 15
+      break
     elif choice6 == "b":
       print("Nice, you wasted your time sleeping.")
+      break
     elif choice6 == "c":
       print("Cool, you trained for a whole month here and you also made a friend.")
-      mainAbility += 30
+      attack += 30
       defense += 20
+      break
     elif choice6 == "d":
       print("You went to a party and you became more socially active.")
       charisma += 10
+      break
+    else:
+      choice6 = input("Invaid response. Select one of the choices.")
       
 def story5():
+  global charisma
+  global IQ 
+  global attack
+  global defense 
+  global mainAbility
+  global mainScore
+  global money
+  global name
   print("\nYou feel hungry so you decide to head to a nearby diner.")
   time.sleep(2.5)
   print("""\n*CRASH!!!!!* You see a man fly out of the window of the diner. "AND STAY OUT YOU FREELOADER!!" says a man.""")
@@ -311,8 +330,41 @@ def story5():
   print("""\nThis guy seems like a good person to help me defeat the king. I need to get him to join my team.""")
   time.sleep(2.5)
   print("""\nHey you join my team!. 
-  Yasen: hrmmmm. If u defeet meee! I wil join u!
-  You: This will be a piece of cake. Hes so drunk I would never lose.""")
+  Yasen: hrmmmm. If u defeet meee! I wil join u!"""
+   +name+""":This will be a piece of cake. Hes so drunk I would never lose.""")
+  time.sleep(2.5)
+  print("""\n Alright lets fight!""")
+  while IQ < 80:
+    choice7 = input("""\nHow should I start my first attack?
+    A: Hard punch
+    B: Flying kick
+    C: Kick in the groin""").lower()
+    break
+  while IQ > 80:
+    choice7 = input("""How should I start my first attack?
+    A: Hard punch
+    B: Flying kick
+    C: Kick in the groin
+    D: Attack him with your """ + mainAbility+ """ ability. Swords can't block magic""").lower()  
+    break
+  while True:
+    if choice7 == "a":
+      print("""\n You punch him hard in the face. He dodges the punch and hits you on the head with the back of his sword.
+      Yasen: Really a punch?""")
+      break
+    elif choice7 =="b":
+      print("""\nYou run and do a flying kick he grabs your leg and swings you to the ground.""")
+      break
+    elif choice7 == "c":
+      print("""You kick him in the groin with all your might. You hear a metal bang. 
+    Yasen: I prepared for those kind of attacks.""")
+      break
+    elif choice7 == "d":
+      print("")
+      break
+    else:
+      choice7 = input("Invalid response. Select one of the choices")
+
 intro()
 stats()
 story1()
@@ -320,3 +372,6 @@ story2()
 stats()
 story3()
 stats()
+story4()
+stats()
+story5()
