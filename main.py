@@ -275,7 +275,7 @@ def story4():
   global name
   print("After ecountering with Bani, your quest continues.")
   time.sleep(2.5)
-  choice6 = ("""/nWe have a month of time to kill, what do you want to do to pass the time? Somthing productive."
+  choice6 = input("""/nWe have a month of time to kill, what do you want to do to pass the time? Somthing productive."
 
   A. Go to library
   B. Go to bed
@@ -285,25 +285,25 @@ def story4():
   Your Choice: """).lower()
   while True:
     if choice6 == "a":
-      print("Good, you can study about ancient aspects.")
+      print("Good, you can study about ancient aspects. Your magical abilities increased dramaitcally. A")
       mainScore += 10
       IQ += 15
       break
     elif choice6 == "b":
-      print("Nice, you wasted your time sleeping.")
+      print("Nice, you wasted your time sleeping. Time is running out, we need to deafet king Waes.")
       break
     elif choice6 == "c":
-      print("Cool, you trained for a whole month here and you also made a friend.")
+      print("Cool, you trained for a whole month here you became a better warrior.")
       attack += 30
       defense += 20
       break
     elif choice6 == "d":
-      print("You went to a party and you became more socially active.")
+      print("""You went to a party and you became more socially active and made a friend named Baolue. He is also a warrior in training with earth abilities. His family has history with the king, his sister got killed in a crossfire within their disputes. He lost his grandfather from battling the king. He agreed to join your side on defeating King Waes.""")
       charisma += 10
       break
     else:
-      choice6 = input("Invaid response. Select one of the choices.")
-      
+      choice6 = input("Invaid response. Select one of the choices.").lower()
+    time.sleep(4)
 def story5():
   global charisma
   global IQ 
@@ -345,7 +345,9 @@ def story5():
     A: Hard punch
     B: Flying kick
     C: Kick in the groin
-    D: Attack him with your """ + mainAbility+ """ ability. Swords can't block magic""").lower()  
+    D: Attack him with your """ + mainAbility+ """ ability. Swords can't block magic
+    
+    Your Choice: """).lower()  
     break
   while True:
     if choice7 == "a":
@@ -356,14 +358,33 @@ def story5():
       print("""\nYou run and do a flying kick he grabs your leg and swings you to the ground.""")
       break
     elif choice7 == "c":
-      print("""You kick him in the groin with all your might. You hear a metal bang. 
+      print("""\nYou kick him in the groin with all your might. You hear a metal bang. 
     Yasen: I prepared for those kind of attacks.""")
       break
     elif choice7 == "d":
-      print("")
+      print("""\nYou attack him with your """ + mainAbility+ """ ability. He trys to block it with his sword. But fails. He is blown back by your attack.""")
       break
     else:
-      choice7 = input("Invalid response. Select one of the choices")
+      choice7 = input("Invalid response. Select one of the choices").lower()
+  while choice7 != "d":
+    print("""Your attacks failed Yasen puts a bandana on his head the arua around him turns dark and serious 
+ he positions his 4 sword in the shape of a square. He vanishes into thin air. You feel a sharp pain he struck you in the stomach. """+name+"""GAHHHH!!!
+ You feel like your ribs just broke.
+ Yasen: I hit you with the back of my swords. Come back when your stronger.""")
+  while choice7 == "d":
+    print("""Yasen: You have bested me I will  """)
+def story6():
+  choice8 = input("""Their is a fearsome champion who is very skilled swordsman and a skilled wind user. He fights in the coliseum and he is the number one challenger. Would you like to challenge him now?
+  A.
+  B.
+  
+  Your Choice: """).lower()
+  if choice8 == "a":
+    print("")
+  else:
+    print("")
+
+      
 
 intro()
 stats()
