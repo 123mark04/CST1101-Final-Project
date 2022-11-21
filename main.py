@@ -305,7 +305,7 @@ def story4():
     elif choice6 == "d":
       time.sleep(2)
       print("""\nYou went to a party and you became more socially active and made a friend named Baolue. He is also a warrior in training with earth abilities. His family has history with the king, his sister got killed in a crossfire within their disputes. He lost his grandfather from battling the king. He agreed to join your side on defeating King Waes.""")
-      charisma += 10
+      charisma += 20
       break
     else:
       choice6 = input("Invaid response. Select one of the choices.").lower()
@@ -320,7 +320,12 @@ def story5():
   global mainScore
   global money
   global name
-  print("\nYou feel hungry so you decide to head to a nearby diner.")
+  if charisma == 0: 
+    print("\nYou feel hungry so you decide to head to a nearby diner.")
+  elif charisma == 20:
+    print("""\nYou feel hungry so you decide to head to a nearby diner with your party member.""")
+  else:
+    print("""\nYou feel hungry so you decide to head to a nearby diner with your party members.""")
   time.sleep(2.5)
   print("""\n*CRASH!!!!!* You see a man fly out of the window of the diner. "AND STAY OUT YOU FREELOADER!!" says a man.""")
   time.sleep(2.5)
@@ -389,34 +394,86 @@ Your Choice: """).lower()
     break
   while choice7 == "d":
     print("""Yasen: You have bested me I will join your effort to defeat the king. """)
-  time.sleep(2.5)
+    charisma += 20
+  time.sleep(4)
 def story6():
   choice8 = input("""There is a fearsome champion who is a very skilled swordsman and a skilled wind user. He fights in the coliseum and he is the number one challenger. Would you like to challenge him now?
   A. Yes, he will be a great addition to our party.
   B. No, I'll pass. I am no ready right now.
   Your Choice: """).lower()
+  time.sleep(2)
   while choice8 == "b":
-    print("""""")
+    print("""\nYou choose not to fight in the the coliseum and continue your journey """)
   while choice8 == "a":
     choice8 = "completed"
-    print("""""")
+    print(""" """)
   
 def story7(): 
   print("""After challenging all those fighters you decide to take a rest under a tree in a nearby forest.""")
-  time.sleep(2.5)
+  time.sleep(2)
   print("""*bushes rustle behind you*""")
-  time.sleep(2.5)
+  time.sleep(2)
   print("""You get up quickly and look around you. Theres something in the bush.""")
-  time.sleep(2.5)
-  print("""A wolf jumps out of the bushes.
-  Wolf: What are you doing in my forest?"""
-  +name+""":HOLY SHIT A TALKING WOLF.""")
-  time.sleep(2.5)
-  print("""Wolf: Calm down. My name is wolf. I was cursed by a magic user. They gave me knowledge and the ability to speak.""")
-  time.sleep(2.5)
+  time.sleep(2)
+  print("""A wolf jumps out of the bushes.""")
+  time.sleep(1.5)
+  print("""Wolf: What are you doing in my forest?""")
+  time.sleep(1.5)
+  print(name+""":HOLY SHIT A TALKING WOLF.""")
+  time.sleep(2)
+  print("""Wolf: Calm down. My name is wolf. I was cursed by a magic user. I was once a general in king waes army. He was walking down the stairs while I was walking up and I blocked his way. He got one of his magic users to turn me into a wolf.""")
+  time.sleep(2)
+  print("""I ran away into the forest and never looked back. I miss my family.""")
+  time.sleep(2)
   print(name+""": Woah I didnt know that kind of magic existed.""")
+  time.sleep(2)
+  print(name+""": Actualy we are on our way to defeat the king. Do you want to join us?""")
+  time.sleep(2)
+  print("""Wolf: We just met, how could I trust you?""")
+  time.sleep(2)
+  choice9 = input("""I need to get the wof's trust. I should:
+  
+    A: If we defeat the king we can help remove your curse.
+    B: We have the same goal lets defeat the king.
+    C: I will fight you if you dont join us.
+  
+  Your choice: """).lower()
+  while True:
+    if choice9 == "a":
+      print("")
+    elif choice9 == "b":
+      print("")
+    elif choice9 == "c"
+      print("")
+    else:
+      choice9 = input("Invaid reponse. Please choose A,B or C.").lower()
 
-      
+def story8():
+  print("""We are almost ready to face the king, we are setting a plan of a attack 1 month from now. """)
+  time.sleep(3)
+  choice10 = input("""What are you guys planning to do for the first 3 weeks?
+    A. Train as a team
+    B. Go to a stripclub
+    C. Research battle tactics
+    D. Buy a new spellbook 
+    
+Your Chioce: """).lower()
+  time.sleep(2)
+  while True:
+  if choice10 == "a":
+    print("Great, You and your party will go to a courtyard in Fargu")
+    break
+  elif choice10 == "b":
+    print("Nice, you can go there and start twerking with your team.")
+    break
+  elif choice10 == "c"
+    print("You guys can go to library and read books on battling and how to use teammwork.")
+    break
+elif choice10 == "d"
+  
+  print("After a long journey, me and my party are set to defeat King Waes once and for all and give the citizens freedom and stop the unequal treatmeant of the social classes.""")
+  time.sleep(3)
+
 
 intro()
 stats()
