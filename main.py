@@ -90,10 +90,10 @@ Your Choice: """).lower()
       break
     else:
       choice1 = input("You must choose option A or B. So pick one! ").lower()
-  time.sleep(7)
+  time.sleep(5)
 
   print("""\nYou decide that it is about time leave the orphanage and start to travel through the country to gain new skills and alies. Before leave you ask everyone to if they would join you on your quest.""")
-  time.sleep(8)
+  time.sleep(5)
   if choice1 == "a":
     print("""\nEveryone looked at each other unsure wheather to join you. But one person name Hingy agreed to join you. He was your best friend and you two train a lot with each other. You both have a total of 200 gold that you have earned through the years. You were happy to have a companion and set off to a city called Fargu.""")
     money += 200
@@ -113,6 +113,7 @@ Your Choice: """).lower()
     B. Take your chances. This book may give you new magical ability.
     
 You Choice: """).lower()
+    time.sleep(2)
     break
   while IQ == 80:
     if choice2 == "a":
@@ -125,6 +126,7 @@ You Choice: """).lower()
       break
     else:
       choice2= input("Invaild response. Please choose option A or B.").lower()
+      time.sleep(2)
 #Low IQ options
   while IQ < 80:
     choice2 = input("""\n    A. Decline his offer?
@@ -132,6 +134,7 @@ You Choice: """).lower()
     B. Take the book this book may give you new magical ability.
 
 Your Choice: """).lower()
+    time.sleep(2)
     break
   while IQ < 80:
     if choice2 == "a":
@@ -145,6 +148,7 @@ Your Choice: """).lower()
       break
     else:
       choice2= input("Invaild response. Please choose option A or B.").lower()
+      time.sleep(2)
   time.sleep(4)
 def story3(): 
   global charisma
@@ -158,27 +162,27 @@ def story3():
   print("\nYou finally arrive to Fargu and final goal is to kill the King Waes. But you can't do it alone, you want to find other people to team up with to defeat the King.")
   time.sleep(5)
   print("\nYou see a warrior in the distance and you're thinking of going up to him.")
-  time.sleep(2)
+  time.sleep(3)
   print("\n"+name+": Hey who are you?!")
   time.sleep(1)
   print("""\nWarrior: "I'm Bani, what do you want?" *Casually floating water in his right hand*""")
-  time.sleep(2)
+  time.sleep(3)
   print("\n" +name+": Hey I'm "+ str(name) + """, and I need your help. Can you team up with me? We need to kill the King before he has full control of our nation.""")
-  time.sleep(2)
+  time.sleep(3)
   print("""\nBani: Kill the king you say? Why do you need my help?""")
   time.sleep(1)
   print("\n"+name+ """: Because you're one of a few people I'm going to find here and I see you have water powers so we can combine our powers to fight through this""")
-  time.sleep(2)
-  print("""\nBani: The king is someone to not be underestimated. He has a whole army by his side.""")
-  time.sleep(2)
-  print("""\nMy brother is part of his army. The king has his daughter captive in the next country 3 weeks away.I want you help me save her after we kill the king?""") 
-  time.sleep(2)
-  print("\n"+name+""": I will save your niece after killing the king""")
   time.sleep(3)
-  print("""\nBani: Now I must ask you a few questions to test your knowledge. If you are able to answer them correctly I will join you.""")
-  time.sleep(5)
-  print("\n"+name+""": OK. What are your questions.""")
+  print("""\nBani: The king is someone to not be underestimated. He has a whole army by his side.""")
+  time.sleep(3)
+  print("""\nMy brother is part of his army. The king has his daughter captive in the next country 3 weeks away.I want you help me save her after we kill the king?""") 
+  time.sleep(3)
+  print("\n"+name+""": I will save your niece after killing the king""")
   time.sleep(2)
+  print("""\nBani: Now I must ask you a few questions to test your knowledge. If you are able to answer them correctly I will join you.""")
+  time.sleep(3)
+  print("\n"+name+""": OK. What are your questions.""")
+  time.sleep(1)
   questions = []
   choice3 = input("""\nWhat is the fith plant in our solar system?
     A. Jupiter
@@ -275,14 +279,15 @@ def story4():
   global name
   print("After ecountering with Bani, your quest continues.")
   time.sleep(2.5)
-  choice6 = input("""/nWe have a month of time to kill, what do you want to do to pass the time? Somthing productive."
+  choice6 = input("""\nWe have a month of time to kill, what do you want to do to pass the time? Somthing productive."
 
   A. Go to library
   B. Go to bed
   C. Train in courtyard
   D. Go to party
 
-  Your Choice: """).lower()
+  Your Choice: """).lower
+  time.sleep(2)
   while True:
     if choice6 == "a":
       print("Good, you can study about ancient aspects. Your magical abilities increased dramaitcally. A")
@@ -298,11 +303,13 @@ def story4():
       defense += 20
       break
     elif choice6 == "d":
-      print("""You went to a party and you became more socially active and made a friend named Baolue. He is also a warrior in training with earth abilities. His family has history with the king, his sister got killed in a crossfire within their disputes. He lost his grandfather from battling the king. He agreed to join your side on defeating King Waes.""")
+      time.sleep(2)
+      print("""\nYou went to a party and you became more socially active and made a friend named Baolue. He is also a warrior in training with earth abilities. His family has history with the king, his sister got killed in a crossfire within their disputes. He lost his grandfather from battling the king. He agreed to join your side on defeating King Waes.""")
       charisma += 10
       break
     else:
       choice6 = input("Invaid response. Select one of the choices.").lower()
+      time.sleep(2)
     time.sleep(4)
 def story5():
   global charisma
@@ -338,7 +345,10 @@ def story5():
     choice7 = input("""\nHow should I start my first attack?
     A: Hard punch
     B: Flying kick
-    C: Kick in the groin""").lower()
+    C: Kick in the groin
+  
+Your Choice: """).lower()
+    time.sleep(2)
     break
   while IQ > 80:
     choice7 = input("""How should I start my first attack?
@@ -348,6 +358,7 @@ def story5():
     D: Attack him with your """ + mainAbility+ """ ability. Swords can't block magic
     
     Your Choice: """).lower()  
+    time.sleep(2)
     break
   while True:
     if choice7 == "a":
@@ -366,23 +377,44 @@ def story5():
       break
     else:
       choice7 = input("Invalid response. Select one of the choices").lower()
+      time.sleep(2)
   while choice7 != "d":
-    print("""Your attacks failed Yasen puts a bandana on his head the arua around him turns dark and serious 
- he positions his 4 sword in the shape of a square. He vanishes into thin air. You feel a sharp pain he struck you in the stomach. """+name+"""GAHHHH!!!
- You feel like your ribs just broke.
- Yasen: I hit you with the back of my swords. Come back when your stronger.""")
+    print("""\nYour attacks failed Yasen puts a bandana on his head the arua around him turns dark and serious.h e positions his 4 sword in the shape of a square. He vanishes into thin air. You feel a sharp pain he struck you in the stomach.""")
+    time.sleep(3)
+    print("\n"+name+""":GAHHHH!!!
+ You feel like your ribs just broke.""")
+    time.sleep(3)
+    print("""\nYasen: I hit you with the back of my swords. Come back when your stronger.""")
+    time.sleep(3)
+    break
   while choice7 == "d":
-    print("""Yasen: You have bested me I will  """)
+    print("""Yasen: You have bested me I will join your effort to defeat the king. """)
+  time.sleep(2.5)
 def story6():
-  choice8 = input("""Their is a fearsome champion who is very skilled swordsman and a skilled wind user. He fights in the coliseum and he is the number one challenger. Would you like to challenge him now?
-  A.
-  B.
-  
+  choice8 = input("""There is a fearsome champion who is a very skilled swordsman and a skilled wind user. He fights in the coliseum and he is the number one challenger. Would you like to challenge him now?
+  A. Yes, he will be a great addition to our party.
+  B. No, I'll pass. I am no ready right now.
   Your Choice: """).lower()
-  if choice8 == "a":
-    print("")
-  else:
-    print("")
+  while choice8 == "b":
+    print("""""")
+  while choice8 == "a":
+    choice8 = "completed"
+    print("""""")
+  
+def story7(): 
+  print("""After challenging all those fighters you decide to take a rest under a tree in a nearby forest.""")
+  time.sleep(2.5)
+  print("""*bushes rustle behind you*""")
+  time.sleep(2.5)
+  print("""You get up quickly and look around you. Theres something in the bush.""")
+  time.sleep(2.5)
+  print("""A wolf jumps out of the bushes.
+  Wolf: What are you doing in my forest?"""
+  +name+""":HOLY SHIT A TALKING WOLF.""")
+  time.sleep(2.5)
+  print("""Wolf: Calm down. My name is wolf. I was cursed by a magic user. They gave me knowledge and the ability to speak.""")
+  time.sleep(2.5)
+  print(name+""": Woah I didnt know that kind of magic existed.""")
 
       
 
@@ -396,3 +428,7 @@ stats()
 story4()
 stats()
 story5()
+stats()
+story6()
+stats()
+story7()
