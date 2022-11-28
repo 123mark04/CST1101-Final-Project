@@ -431,7 +431,7 @@ def story7():
   time.sleep(2)
   print("""Wolf: We just met, how could I trust you?""")
   time.sleep(2)
-  choice9 = input("""I need to get the wof's trust. I should:
+  choice9 = input("""I need to get the wolf's trust. I should:
   
     A: If we defeat the king we can help remove your curse.
     B: We have the same goal lets defeat the king.
@@ -440,11 +440,11 @@ def story7():
   Your choice: """).lower()
   while True:
     if choice9 == "a":
-      print("")
+      print("""Wolf: Wait really? You can really help me remove the curse? Thank you. I will join your team.""")
     elif choice9 == "b":
-      print("")
-    elif choice9 == "c"
-      print("")
+      print("""Wolf: It is true we have the same goal but I dont want to risk my life.""")
+    elif choice9 == "c": 
+      print("""Wolf: Its pointless to fight me I still wont join you.""")
     else:
       choice9 = input("Invaid reponse. Please choose A,B or C.").lower()
 
@@ -460,21 +460,30 @@ def story8():
 Your Chioce: """).lower()
   time.sleep(2)
   while True:
-  if choice10 == "a":
-    print("Great, You and your party will go to a courtyard in Fargu")
-    break
-  elif choice10 == "b":
-    print("Nice, you can go there and start twerking with your team.")
-    break
-  elif choice10 == "c"
-    print("You guys can go to library and read books on battling and how to use teammwork.")
-    break
-elif choice10 == "d"
-  
+    if choice10 == "a":
+      print("Great, You and your party will go to a courtyard in Fargu")
+      break
+    elif choice10 == "b":
+      print("Nice, you can go there and start twerking with your team.")
+      break
+    elif choice10 == "c":
+      print("You guys can go to library and read books on battling and how to use teammwork.")
+      break
+    elif choice10 == "d":
+      print("Great, you can buy a spellbook from a magical workshop.")
+    else:
+      choice10 = input("Invaid response. Please choose A, B, C or D.").lower()
   print("After a long journey, me and my party are set to defeat King Waes once and for all and give the citizens freedom and stop the unequal treatmeant of the social classes.""")
   time.sleep(3)
+  print("We all get our gear ready and we walk to his kingdom. ")
+  time.sleep(2)
+  print("WE TRAINED LONG AND HARD FOR THIS DAY TO COME.")
+  time.sleep(2)
+  print("OUR POWERS WILL BE THE ONLY WAY WE CAN DEFEAT KING WAES.")
+  time.sleep(2)
+  print("KING WAES CANNOT GET AWAY WITH HIS CRIMES TOWARDS THE LOWERCLASS.")
 
-
+  
 intro()
 stats()
 story1()
