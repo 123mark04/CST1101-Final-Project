@@ -5,6 +5,7 @@ attack = 20
 defense = 20
 mainScore = 10
 money = 0
+party = []
 def stats():
   print("\nIQ = " +str(IQ))
   print("Attack = " +str(attack))
@@ -12,6 +13,7 @@ def stats():
   print (mainAbility+" = " +str(mainScore))
   print("Money = " +str(money)) 
   time.sleep(4)
+  
 def intro():
   global charisma
   global IQ  
@@ -96,6 +98,7 @@ Your Choice: """).lower()
   time.sleep(5)
   if choice1 == "a":
     print("""\nEveryone looked at each other unsure wheather to join you. But one person name Hingy agreed to join you. He was your best friend and you two train a lot with each other. You both have a total of 200 gold that you have earned through the years. You were happy to have a companion and set off to a city called Fargu.""")
+    party.append("Hingy")
     money += 200
     time.sleep(5)
   else:
@@ -262,6 +265,7 @@ Your Choice: """).lower()
   correct = questions.count("correct")
   while correct > 1:
     print("""Wow, Your pretty smart. Seems like I'll trust your judgement and fight along side you.""")
+    party.append("Bani")
     charisma += 20
     break
   while correct < 2: 
@@ -394,19 +398,32 @@ Your Choice: """).lower()
     break
   while choice7 == "d":
     print("""Yasen: You have bested me I will join your effort to defeat the king. """)
+    party.append("Yasen")
+    break
     charisma += 20
   time.sleep(4)
 def story6():
+  global charisma
+  global IQ 
+  global attack
+  global defense 
+  global mainAbility
+  global mainScore
+  global money
+  global name
   choice8 = input("""There is a fearsome champion who is a very skilled swordsman and a skilled wind user. He fights in the coliseum and he is the number one challenger. Would you like to challenge him now?
   A. Yes, he will be a great addition to our party.
   B. No, I'll pass. I am no ready right now.
   Your Choice: """).lower()
+  while choice8 != "a" or choice8 != "b":
+    choice8 = input("Invaid response. Please choose A or B.")
   time.sleep(2)
   while choice8 == "b":
     print("""\nYou choose not to fight in the the coliseum and continue your journey """)
   while choice8 == "a":
-    choice8 = "completed"
-    print(""" """)
+    choice8 = "Completed"
+    print("""Only after I beat him first.""")
+    
   
 def story7(): 
   print("""After challenging all those fighters you decide to take a rest under a tree in a nearby forest.""")
@@ -447,7 +464,7 @@ def story7():
       print("""Wolf: Its pointless to fight me I still wont join you.""")
     else:
       choice9 = input("Invaid reponse. Please choose A,B or C.").lower()
-
+    break
 def story8():
   print("""We are almost ready to face the king, we are setting a plan of a attack 1 month from now. """)
   time.sleep(3)
@@ -477,11 +494,15 @@ Your Chioce: """).lower()
   time.sleep(3)
   print("We all get our gear ready and we walk to his kingdom. ")
   time.sleep(2)
-  print("WE TRAINED LONG AND HARD FOR THIS DAY TO COME.")
+  print("\n*You are about to give a speech to your team*")
+  time.sleep(2)
+  print("\nWE TRAINED LONG AND HARD FOR THIS DAY TO COME.")
   time.sleep(2)
   print("OUR POWERS WILL BE THE ONLY WAY WE CAN DEFEAT KING WAES.")
   time.sleep(2)
   print("KING WAES CANNOT GET AWAY WITH HIS CRIMES TOWARDS THE LOWERCLASS.")
+  time.sleep(2)
+  print("")
 
   
 intro()
