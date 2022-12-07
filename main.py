@@ -431,6 +431,12 @@ def story6():
       time.sleep(2)
       print("I walked with a serious attitude with the swordsman accross me as the crowd roars.")
       time.sleep(2)
+      print(name+""": What is your name?""")
+      time.sleep(2)
+      print("""Champion: My name is """)
+      time.sleep(2)
+      print("")
+      time.sleep
       print("""Referee: "I want a fair fight, first man who gets knocked out, loses. Ready, On my gun shot.""")
       time.sleep(2)
       print("3")
@@ -458,7 +464,9 @@ Your choice: """).lower()
           print("""AHHHHHHHHHHH *he dodges your punch* and counter attacks you with an uppercut.""")
           break
         elif choice11 == "d":
-          print("You throw sand in his eyes.")
+          print("""You throw sand in his eyes. and starts to flaring his sword around. You go behind him and snach his sword.""")
+          time.sleep(2)
+          print("""That was a dirty trick.""")
           break
         else:
           choice11 = input("Invaid response. Please choose A, B, C, or D").lower()
