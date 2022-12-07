@@ -411,20 +411,58 @@ def story6():
   global mainScore
   global money
   global name
-  choice8 = input("""There is a fearsome champion who is a very skilled swordsman and a skilled wind user. He fights in the coliseum and he is the number one challenger. Would you like to challenge him now?
-  A. Yes, he will be a great addition to our party.
-  B. No, I'll pass. I am no ready right now.
+  
+  choice8 = input("""There is a fearsome champion who is a very skilled swordsman and a skilled wind user. He fights in the coliseum and he is the number one challenger. The winner wins 1000 gold. Would you like to challenge him now?
+  A. Yes, I'm going to challenge him.
+  B. No, I'll pass. I am not ready right now.
   Your Choice: """).lower()
   while choice8 != "a" or choice8 != "b":
-    choice8 = input("Invaid response. Please choose A or B.")
+    choice8 = input("Invaid response. Please choose A or B.").lower()
   time.sleep(2)
-  while choice8 == "b":
-    print("""\nYou choose not to fight in the the coliseum and continue your journey """)
-  while choice8 == "a":
-    choice8 = "Completed"
-    print("""Only after I beat him first.""")
-    
-  
+  while choice8 == "a" or choice8 == "b":
+    if choice8 == "b":
+      print("""\nYou choose not to fight in the the coliseum and continue your journey """)
+      continue
+    else:
+      choice8 = "Completed"
+      print("""The next fight starts tommorow I should get some rest for the fight""")
+      time.sleep(2)
+      print("*The next morning*")
+      time.sleep(2)
+      print("I walked with a serious attitude with the swordsman accross me as the crowd roars.")
+      time.sleep(2)
+      print("""Referee: "I want a fair fight, first man who gets knocked out, loses. Ready, On my gun shot.""")
+      time.sleep(2)
+      print("3")
+      time.sleep(2)
+      print("2")
+      time.sleep(2)
+      print("1")
+      time.sleep(2)
+      print("BANG!")
+      choice11 = input("""The fight begins, What is your first move?
+A. Attack with your """+mainAbility+""" ability
+B. Intimmidate the swordsman and wait for him to make the first move.
+C. Charge at him and punch him.
+D. Throw sand in his eyes
+
+Your choice: """).lower()
+      while True:
+        if choice11 == "a":
+          print("""You start swirling up a ball of """+mainAbility+""" and blast it at him.""")
+          break
+        elif choice11 == "b":
+          print("""Bring it on punk!!! I'll let you go first.""")
+          break
+        elif choice11 == "c":
+          print("""AHHHHHHHHHHH *he dodges your punch* and counter attacks you with an uppercut.""")
+          break
+        elif choice11 == "d":
+          print("You throw sand in his eyes.")
+          break
+        else:
+          choice11 = input("Invaid response. Please choose A, B, C, or D").lower()
+        
 def story7(): 
   print("""After challenging all those fighters you decide to take a rest under a tree in a nearby forest.""")
   time.sleep(2)
