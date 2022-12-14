@@ -23,7 +23,8 @@ def intro():
   global mainScore
   global money
   global name
-  name = input("What is your name player?")
+  name = input("""What is your name player?
+""")
   time.sleep(1)
   print("Ah yes " + name + ". what a wonderful name!")
   time.sleep(1.5)
@@ -411,90 +412,192 @@ def story6():
   global mainScore
   global money
   global name
+  name = input("""What is your name:
+  """)
+  mainAbility = input("""What ability
+  """)
+  choice8 = input("""\nThere is a fearsome champion who is a very skilled swordsman and a skilled wind user. He fights in the coliseum and he is the number one challenger. The winner wins 1000 gold. Would you like to challenge him now?
   
-  choice8 = input("""There is a fearsome champion who is a very skilled swordsman and a skilled wind user. He fights in the coliseum and he is the number one challenger. The winner wins 1000 gold. Would you like to challenge him now?
   A. Yes, I'm going to challenge him.
   B. No, I'll pass. I am not ready right now.
+  
   Your Choice: """).lower()
-  while choice8 != "a" or choice8 != "b":
+  while choice8 != "a" and choice8 != "b":
     choice8 = input("Invaid response. Please choose A or B.").lower()
   time.sleep(2)
   while choice8 == "a" or choice8 == "b":
     if choice8 == "b":
       print("""\nYou choose not to fight in the the coliseum and continue your journey """)
-      continue
+      time.sleep(4)
+      print("\n")
+      break
     else:
-      choice8 = "Completed"
-      print("""The next fight starts tommorow I should get some rest for the fight""")
+      print("""\nThe next fight starts tommorow I should get some rest for the fight""")
       time.sleep(2)
-      print("*The next morning*")
+      print("\n*The next morning*")
       time.sleep(2)
-      print("I walked with a serious attitude with the swordsman accross me as the crowd roars.")
+      print("\nI walked with a serious attitude with the swordsman accross me as the crowd roars.")
       time.sleep(2)
-      print(name+""": What is your name?""")
+      print("\n"+name+""":What is your name?""")
       time.sleep(2)
-      print("""Champion: My name is """)
+      print("""\nChampion:My name is Yawg.""")
       time.sleep(2)
-      print("")
-      time.sleep
-      print("""Referee: "I want a fair fight, first man who gets knocked out, loses. Ready, On my gun shot.""")
+      print("\n"+name+""":I'm """+name+"."  )
       time.sleep(2)
-      print("3")
+      print("\nYawg:I don't care.")
       time.sleep(2)
+      print("""\nReferee:"Ok I want a fair fight, first man who gets knocked out, loses. Ready, On my gun shot.""")
+      time.sleep(2)
+      print("\n3")
+      time.sleep(1)
       print("2")
-      time.sleep(2)
+      time.sleep(1)
       print("1")
-      time.sleep(2)
+      time.sleep(1)
       print("BANG!")
-      choice11 = input("""The fight begins, What is your first move?
-A. Attack with your """+mainAbility+""" ability
-B. Intimmidate the swordsman and wait for him to make the first move.
-C. Charge at him and punch him.
-D. Throw sand in his eyes
+      choice11 = input("""\nThe fight begins, What is your first move?
 
-Your choice: """).lower()
+  A. Attack with your """+mainAbility+""" ability
+  B. Intimmidate the swordsman and wait for him to make the first move.
+  C. Charge at him and punch him.
+  D. Throw sand in his eyes
+
+  Your choice: """).lower()
       while True:
         if choice11 == "a":
-          print("""You start swirling up a ball of """+mainAbility+""" and blast it at him.""")
+          print("""\nYou start swirling up a ball of """+mainAbility+""" and blast it at him.""")
+          time.sleep(2)
+          print("\nThe blast hits him but he stands there unphased.")
           break
         elif choice11 == "b":
-          print("""Bring it on punk!!! I'll let you go first.""")
+          print("""\nBring it on punk!!! I'll let you go first.""")
+          time.sleep(2)
+          print("\n*Yawg charges at you as you try running away*")
+          time.sleep(2)
+          print("\n*but he catches up to you and slashes you in the face with his sword*")
           break
         elif choice11 == "c":
-          print("""AHHHHHHHHHHH *he dodges your punch* and counter attacks you with an uppercut.""")
+          print("""\nAHHHHHHHHHHH *he dodges your punch and counter attacks you with an uppercut*""")
           break
         elif choice11 == "d":
-          print("""You throw sand in his eyes. and starts to flaring his sword around. You go behind him and snach his sword.""")
+          print("""\nYou throw sand in his eyes and starts to flaring his sword around. You go behind him and snach his sword.""")
           time.sleep(2)
-          print("""That was a dirty trick.""")
+          print("""\nYawg: That was a dirty trick.""")
+          time.sleep(2)
+          print("\n"+name+""": I dont care, cry about it.""")
+          time.sleep(2)
           break
         else:
-          choice11 = input("Invaid response. Please choose A, B, C, or D").lower()
+          choice11 = input("\nInvaid response. Please choose A, B, C, or D").lower()
+      time.sleep(2)
+
+      while choice11 == "d":
+        print("\n"+name+""": You start taunting him with his sword and he starts looking all scared.""")
+        choice12 = input("""\nI need to prepare for the next attack. What should I do:
+  A. Wait for him to attack and block his attack with the sword.
+  B. Play dead
+  C. Offer him money to win.
+  D. Slash him with your sword
         
+  Your choice: """).lower()
+        break
+      while choice11 == "d":
+        if choice12 == "a":
+          print("""\nYawg creates a torrnado and you try to  block it but it fails. You get blowned across the coliseum and slam your head against the wall.""")
+          time.sleep(3)
+          battle = "Lose"
+          break
+          print("\nYou lose the match and Yawg wins")
+          time.sleep
+        elif choice12 == "b":
+          print("""\nYou play dead. He doesn't fall for it and punches you in the gut and you get knocked out.""")
+          battle = "Lose"
+          break
+        elif choice12 == "c":
+          print("""\nYou offer him money to lose the fight on purpose. He feels insulted and blows a gust of wind at you and it throws you to the wall and you get knocked out.""")
+          battle = "Lose"
+          break
+        elif choice12 == "d":
+          print("""\nYou slash him in the face with the sword and he falls to his knees.""")
+          time.sleep(2)
+          print("""\nYou are about to slice his head but he starts beging for his life.""")
+          time.sleep(2)
+          print("\n"+name+":Either surrender now, or I'll kill you.")
+          time.sleep(2) 
+          print("\nYawg: I surrender.")
+          time.sleep(2)
+          print("\n*Yawg gets up and walks out of the coliseum*")
+          battle = "win"
+          break
+        else:
+          choice12 = input("""\nInvalid response. Please choose A, B, C, or D""").lower()
+      while choice11 == "a" or choice11 == "b" or choice11 == "c":
+        print("""\nYour attack failed. Prepare for a counterattack.""")
+        choice12 = input("""\nI need to prepare for the next attack. What should I do:
+  
+  A. Wait for him to attack and dodge
+  B. Play dead
+  C. Offer him money to win.
+  D. Beg for forgivness
+        
+  Your choice: """).lower()
+        break
+      while choice11 == "a" or choice11 == "b" or choice11 == "c":
+        battle = "Lose"
+        if choice12 == "a":
+          print("""\nYou end up getting hit with a second attack and fail to recognize that one and get knocked out""")
+          break
+        elif choice12 == "b":
+          print("""\nYou play dead. He doesn't fall for it and punches you in the gut and you get knocked out.""")
+          break
+        elif choice12 =="c":
+          print("""\nYou offer him money to lose the fight on purpose. He feels insulted and blows a gust of wind at you and it throws you to the wall and you get knocked out.""")
+          break
+        elif choice12 == "d":
+          print("""\nYou beg for your life and he laughs""")
+          time.sleep(2)
+          print("""\nHe begins to punch and kick you until you lose conciousness""")
+          break
+        else:
+          choice12 = input ("""Invalid response. Please choose A, B, C, or D.""").lower()
+        time.sleep(3)
+      if battle == "win":
+        print("""\nYou leave the coliseum and Yawg is chasing after you""")
+        time.sleep(2)
+        print("""\nYawg: That was some fight in there. where are you heading next.""")
+        print("\n"+name+""": My goal is to defeat King Waes to liberate the people of Vextop.""")
+        print("""Yawg: I will be honored to join you. Since defeated me, I shall now be your sword in battle.""")
+        print("\n"+name+"""You will be a great addition to my party. Let patch up our wounds and get some rest""")
+        print("\nYawg: Alright captain!")
+        time.sleep(2)
+      else:
+        print("""\nYou lost the fight and go back home to heal my wounds and get some rest.""")
+      break  
+          
 def story7(): 
-  print("""After challenging all those fighters you decide to take a rest under a tree in a nearby forest.""")
+  print("""After dealing with all those fighters you decide to take a rest under a tree in a nearby forest.""")
   time.sleep(2)
-  print("""*bushes rustle behind you*""")
+  print("""\n*bushes rustle behind you*""")
   time.sleep(2)
-  print("""You get up quickly and look around you. Theres something in the bush.""")
+  print("""\nYou get up quickly and look around you. Theres something in the bush.""")
   time.sleep(2)
-  print("""A wolf jumps out of the bushes.""")
+  print("""\nA wolf jumps out of the bushes.""")
   time.sleep(1.5)
-  print("""Wolf: What are you doing in my forest?""")
+  print("""\nWolf: What are you doing in my forest?""")
   time.sleep(1.5)
-  print(name+""":HOLY SHIT A TALKING WOLF.""")
+  print(name+"""\n:HOLY SHIT A TALKING WOLF.""")
   time.sleep(2)
-  print("""Wolf: Calm down. My name is wolf. I was cursed by a magic user. I was once a general in king waes army. He was walking down the stairs while I was walking up and I blocked his way. He got one of his magic users to turn me into a wolf.""")
+  print("""\nWolf: Calm down. My name is wolf. I was cursed by a magic user. I was once a general in king waes army. He was walking down the stairs while I was walking up and I blocked his way. He got one of his magic users to turn me into a wolf.""")
   time.sleep(2)
-  print("""I ran away into the forest and never looked back. I miss my family.""")
+  print("""\nI ran away into the forest and never looked back. I miss my family.""")
   time.sleep(2)
-  print(name+""": Woah I didnt know that kind of magic existed.""")
+  print(name+"""\n: Woah I didnt know that kind of magic existed.""")
   time.sleep(2)
-  print(name+""": Actualy we are on our way to defeat the king. Do you want to join us?""")
+  print(name+"""\n: Actualy we are on our way to defeat the king. Do you want to join us?""")
   time.sleep(2)
-  print("""Wolf: We just met, how could I trust you?""")
+  print("""\nWolf: We just met, how could I trust you?""")
   time.sleep(2)
-  choice9 = input("""I need to get the wolf's trust. I should:
+  choice9 = input("""\nI need to get the wolf's trust. I should:
   
     A: If we defeat the king we can help remove your curse.
     B: We have the same goal lets defeat the king.
@@ -503,11 +606,11 @@ def story7():
   Your choice: """).lower()
   while True:
     if choice9 == "a":
-      print("""Wolf: Wait really? You can really help me remove the curse? Thank you. I will join your team.""")
+      print("""\nWolf: Wait really? You can really help me remove the curse? Thank you. I will join your team.""")
     elif choice9 == "b":
-      print("""Wolf: It is true we have the same goal but I dont want to risk my life.""")
+      print("""\nWolf: It is true we have the same goal but I dont want to risk my life.""")
     elif choice9 == "c": 
-      print("""Wolf: Its pointless to fight me I still wont join you.""")
+      print("""\nWolf: Its pointless to fight me I still wont join you.""")
     else:
       choice9 = input("Invaid reponse. Please choose A,B or C.").lower()
     break
@@ -538,7 +641,7 @@ Your Chioce: """).lower()
       choice10 = input("Invaid response. Please choose A, B, C or D.").lower()
   print("After a long journey, me and my party are set to defeat King Waes once and for all and give the citizens freedom and stop the unequal treatmeant of the social classes.""")
   time.sleep(3)
-  print("We all get our gear ready and we walk to his kingdom. ")
+  print("\nWe all get our gear ready and we walk to his kingdom.")
   time.sleep(2)
   print("\n*You are about to give a speech to your team*")
   time.sleep(2)
@@ -550,7 +653,11 @@ Your Chioce: """).lower()
   time.sleep(2)
   print("")
 
-  
+
+def story9():
+  print("")
+
+story6()
 intro()
 stats()
 story1()
@@ -563,5 +670,7 @@ stats()
 story5()
 stats()
 story6()
-stats()
 story7()
+stats()
+story8()
+story9()
