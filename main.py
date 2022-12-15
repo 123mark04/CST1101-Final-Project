@@ -12,6 +12,8 @@ def stats():
   print("Defence = " +str(defense))
   print (mainAbility+" = " +str(mainScore))
   print("Money = " +str(money)) 
+  print("Party members:")
+  print(party)
   time.sleep(4)
   
 def intro():
@@ -25,6 +27,7 @@ def intro():
   global name
   name = input("""What is your name player?
 """)
+  party.append(name)
   time.sleep(1)
   print("Ah yes " + name + ". what a wonderful name!")
   time.sleep(1.5)
@@ -569,6 +572,7 @@ def story6():
         print("""Yawg: I will be honored to join you. Since defeated me, I shall now be your sword in battle.""")
         print("\n"+name+"""You will be a great addition to my party. Let patch up our wounds and get some rest""")
         print("\nYawg: Alright captain!")
+        party.append("Yawg")
         time.sleep(2)
       else:
         print("""\nYou lost the fight and go back home to heal my wounds and get some rest.""")
@@ -607,6 +611,7 @@ def story7():
   while True:
     if choice9 == "a":
       print("""\nWolf: Wait really? You can really help me remove the curse? Thank you. I will join your team.""")
+      party.append("Wolf")
     elif choice9 == "b":
       print("""\nWolf: It is true we have the same goal but I dont want to risk my life.""")
     elif choice9 == "c": 
@@ -657,7 +662,6 @@ Your Chioce: """).lower()
 def story9():
   print("")
 
-story6()
 intro()
 stats()
 story1()
