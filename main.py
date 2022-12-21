@@ -695,6 +695,9 @@ def story9():
   global mainScore
   global money
   global name
+  name = input("name")
+  mainAbility = input("ability")
+  party = [name, "Bani", "Walter"]
   print("We have arrived at the kings royal palace.")
   time.sleep(2)
   print("Our plan of attack is to blast through the palace gates.")
@@ -735,13 +738,14 @@ def story9():
   print("I'll make the first move.")
   time.sleep(2)
   choice11 = input("""How do you start your first attack?
+  
   A. Run for your life.
   B. Go for the first swing with your sword.
   C. Let him make the first move.
   D. Use your""" +mainAbility + """ability on him.
   
-  Your choice: """).lower()
-  while IQ >= 120 and charisma >= 100 and attack >= 70:
+    Your choice: """).lower()
+  while True:
     if choice11 == "a":
       print("\nYou exit the courtyard and make a run for it.")
       time.sleep(2)
@@ -756,19 +760,194 @@ def story9():
       print("""\nBad choice. You died as a coward. You failed to kill the king and died with disgrace.""")
       break
     elif choice11 == "b":
-      print("You swing your sword. Your sword clashes with his sword.")
+      print("\nYou swing your sword. Your sword clashes with his sword.")
+      time.sleep(2)
+      print("\n*staring at each other intensly*")
+      time.sleep(2)
+      print("\n"+name+": You think you can get away with this, all these people are in a state of sorrowness because of you and and they aren't even supporting you.")
+      time.sleep(4)
+      print("\nKing Waes: I don't need a lecture from you. I am the king. My power is absolute!")
+      time.sleep(2)
+      print("\n"+name+": We'll see about that!")
       break
     elif choice11 == "c":
       print("""\nHe charges at you. You brace for impact but despite your strong stance, he knocks you to the ground.""")
+      time.sleep(2)
+      print("""\nKing Waes: Foolish of you to let the enemy make the first move. You should have made your move when you had the chance.""")
+      time.sleep(2)
+      print("""\n*King Waes kicks you in the side and breaks your ribs*""")
+      time.sleep(2)
+      print("\n"+name+""": Foolish you say? I think not.""")
+      time.sleep(2)
+      print("""\n*You stab King Waes in the foot with your sword.*""")
       break
     elif choice11 == "d":
-      print("You start winding up a ball of"""+mainAbility+" and blast it at him and he stands there. Unfazed!")
+      print("\nYou start winding up a ball of"""+mainAbility+" and blast it at him and he stands there. Unfazed!")
+      time.sleep(2)
+      print("""\nKing Waes: Did you really think such a puny attack will damage me!""")
+      time.sleep(2)
+      print("\n"+name+""": Damn. How is he so strong!""")
       break
     else:
       choice11 = input("Invaid repsonse. Please pick A, B, C, or D.").lower()
-    while IQ < 120 or charisma < 100 or attack < 70:
-      print("")
+  while choice11 != "a":
+    time.sleep(2)
+    print("I need to plan a conunter attack.")
+    time.sleep(2)
+    print("My party is fighting the guards. Maybe they can lend a hand")
+    time.sleep(2)
+    choice12 = input("""What should our next move be?
+A. Ask a party member for help
+B. Fight the King to buy time for your party to arrive
+C. Secretly tell one of your party members to disguise as a guard                      
+D. Flip the script
 
+  Your Choice: """).lower()
+    break
+  while choice11 != "a":
+    if choice12 == "a":
+      print("\n"+name+ ":Hey "+party[1]+"""Can you lend a hand?""")
+      time.sleep(2)
+      print("\n"+party[1]+"""Sure thing.""")
+      time.sleep(2)
+      print("\nWith "+party[1]+""" help, we was able to get a slash across his face.""")
+      time.sleep(2)
+      print("""\nKing Waes: You annoying little monkeys. Where are my guards.""")
+      time.sleep(2)
+      print("""\nYou are surrounded by guards. You removed """+party[1]+ """ from his posion and now you are out numbered.""")
+      time.sleep(2)
+      print("""You are asking for help form the other party members but they are busy and king Waes and the guards attack at once and he was able to slice bith of your heads at the same time.""")
+      time.sleep(4)
+      print("""Soon, King Waes was able to kill the rest of your army and you and your party are dead.""")
+      time.sleep(2)
+      print("""You lost because you were foolish. Every party member has a role and removing"""+ party[1]+ """from his post caused your entire team to crumble.""")
+      break
+    elif choice12 == "b":
+      print("""\nKing waes: This is all futile. You will never be able to take down my army.""")
+      time.sleep(2)
+      print("""\nYou are all nothing but ants beneath my feet.""")
+      time.sleep(2)
+      print("\n"+name+""": I dont care what you say. People are supposed to be equal and free.""")
+      time.sleep(2)
+      print("""\nKing Waes: NONSENSE!""")
+      time.sleep(2)
+      print("""\n*You dash at him to attack with your sword*.""")
+      time.sleep(2)
+      print("""\nKing waes: That wont work.""")
+      time.sleep(2)
+      print("""*King Waes dodges your attack and kicks you to the ground*""")
+      break
+    elif choice12 == "c":
+      print("\n"+name+ ":Hey "+party[1]+" take a dead guards armor and stay near the king.")
+      time.sleep(2)
+      print("""Incase anything goes wrong ambush him.""")
+      break
+    elif choice12 == "d":
+      print("""*You charge at him and keep fighting with all your might*""")
+      time.sleep(2)
+      print("""*Swinging, dodging, slashing each other with your swords until a moment when you swords clash again*""")
+      time.sleep(2)
+      print("\n"+name+": I'll do anything to protect this kingdom! My parents left me as baby and I have to do this for my own legacy!""")
+      time.sleep(3)
+      print("""\n*You keep fighting until you swing you sword upward toward his neck area and you see a necklace fall out*""")
+      time.sleep(2)
+      print("""\n*You realize it is the same necklace that you're wearing*""")
+      time.sleep(2)
+      print("\n"+name+": Wait! Where did you get this?")
+      time.sleep(2)
+      print("""\nKing Waes: You were born in this kingdom and we grant necklaces to every new Kingdom family member. ...because I am your father. You were taken away to an orphanage.""")
+      time.sleep(2)
+      print("\n"+name+": And my mom?")
+      time.sleep(2)
+      print("""\nKing Waes: Your mother died giving birth to you.""")
+      time.sleep(2)
+      print("""\n*You pull out your necklace from under your cloak and just stand there in shock*""")
+      time.sleep(2)
+      print("\n"+name+""": Then why do do you have all of these Kingdom people do cheap labor?""")
+      time.sleep(2)
+      print("""\nKing Waes: I felt very depressed that you were taken away to an orphanage and I fell into a state of evil power because of this depression.""")
+      time.sleep(2)
+      print("\n"+name+":So what now?")
+      time.sleep(2)
+      print("""\nKing Waes: Come with me son.""")
+      time.sleep(2)
+      print("""\nWe can change this Kingdom to a better place again. Let's do this for your mother.""")
+      time.sleep(2)
+      print("""Yes, for mom.""")
+      time.sleep(2)
+      print("""*You guys hug it out and start the next chapter of this Kindom.""")   
+      break
+    else:
+      choice12 = input("""Invaild response. Please choose A, B, C, D.""").lower()
+  while choice12 == "b":
+    time.sleep(3)
+    print("""\nWe need to make one final push. This last attack needs to kill the king.""")
+    choice13 = input("""What should our last attack be:
+A. Attack all at once with physical attacks.
+B. Concentrate all of your party's magical power into one big blast.
+
+  Your Choice: """).lower()
+    break
+  while choice12 == "c":
+    time.sleep(3)
+    print("""\nWe need to make one final push. This last attack needs to kill the king.""")
+    choice13 = input("""What should our last attack be:
+A. Attack all at once.
+B. Concentrate all of your party's magical powers into one big blast.
+C. Tell """+party[1]+""" to ambush the king.
+
+  Your Choice: """).lower()
+    break
+  while choice12 == "b" or choice12 == "c":
+    if choice13 == "a":
+      print("""\nYou all gather in front of the king to deliver a final blow""")
+      time.sleep(2)
+      print("""King Waes: What a foolish idea you all gathered in one spot.""")
+      time.sleep(2)
+      print("""King Waes charges a huge ball of magical energy in mere seconds and obliterates your entire team.""")
+      time.sleep(2)
+      print("""Your quest to free the kingdom failed.""")
+      time.sleep(2)
+      print("""King Waes evil family continues to rule the kingdom for years to come.""")
+      break
+    elif choice13 == "b":
+      print("""*We start charging up and massive blast with all of our powers combined*""")
+      time.sleep(2)
+      print("*But you guys fail to control your powers into this blast and it ends up overcharging and blasting you all to your death*")
+      time.sleep(3)
+      print("In memory of "+party+".")
+      time.sleep(2)
+        
+      break
+    elif choice13 == "c":
+      print("""King Waes: I have already won this fight. I will kill you with my explotion magic.""")
+      time.sleep(2)
+      print("""\nGuard: King Waes there is an enmergency.""")
+      time.sleep(2)
+      print("""\nKing Waes: I am busy. What is it!""")
+      time.sleep(2)
+      print("""Guard: look at this, *The guard stabs him*""")
+      time.sleep(2)
+      print("""\nKing Waes: what is the meaning of this.""")
+      time.sleep(2)
+      print("""\nThe guard takes off his mask and it was """+party[1]+""".""")
+      time.sleep(2)
+      print("\n"+party[1]+""": Go to hell!""")
+      time.sleep(2)
+      print("""\nKing Waes: That was a dirty trick. It seems that I am going to die because the knife is poisoned.""")
+      print("""\n"""+name+""": Good bye King Waes. I will make sure that the kingdom is safe in m hands""")
+      time.sleep(2)
+      print("""\nThe king dies and ou and your party are seen as heros. You celebrate through the night with the towns people for the death of the king and for becoming the new ruler.""")
+      time.sleep(2)
+      print("""\nCongratulations! You were able to defeat the king.""")
+      break
+    else:
+      choice13 = input("""Invalid respose. Please choose A, B, C, D.""")
+
+  time.sleep(2)
+  print("The End! Thanks for playing.")
+
+story9()
 intro()
 stats()
 story1()
