@@ -591,7 +591,6 @@ def story7():
   global mainScore
   global money
   global name
-  name = "a"
   print("""After dealing with all those fighters you decide to take a rest under a tree in a nearby forest.""")
   time.sleep(2)
   print("""\n*bushes rustle behind you*""")
@@ -608,9 +607,9 @@ def story7():
   time.sleep(2)
   print("""\nI ran away into the forest and never looked back. I miss my family.""")
   time.sleep(2)
-  print("\n"+name+"""Woah I didnt know that kind of magic existed.""")
+  print("\n"+name+""": Woah I didnt know that kind of magic existed.""")
   time.sleep(2)
-  print("\n"+name+"""Actualy we are on our way to defeat the king. Do you want to join us?""")
+  print("\n"+name+""": Actualy we are on our way to defeat the king. Do you want to join us?""")
   time.sleep(2)
   print("""\nWolf: We just met, how could I trust you?""")
   time.sleep(2)
@@ -695,9 +694,6 @@ def story9():
   global mainScore
   global money
   global name
-  name = input("name")
-  mainAbility = input("ability")
-  party = [name, "Bani", "Walter"]
   print("We have arrived at the kings royal palace.")
   time.sleep(2)
   print("Our plan of attack is to blast through the palace gates.")
@@ -947,7 +943,7 @@ C. Tell """+party[1]+""" to ambush the king.
   time.sleep(2)
   print("The End! Thanks for playing.")
 
-story9()
+
 intro()
 stats()
 story1()
